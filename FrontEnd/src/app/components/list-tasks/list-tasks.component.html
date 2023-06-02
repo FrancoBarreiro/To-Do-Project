@@ -1,0 +1,24 @@
+<h2>Lista tareas</h2>
+<table class="table table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Titulo</th>
+            <th>Descripcion</th>
+            <th>Estado</th>
+            <th>Tipo</th>
+            <th>#</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let taskFromBackend of tasks">
+            <td>{{taskFromBackend.title}}</td>
+            <td>{{taskFromBackend.description}}</td>
+            <td>{{taskFromBackend.status}}</td>
+            <td>{{taskFromBackend.taskType}}</td>
+            <td>
+                <button (click)="updateTask(taskFromBackend.id)" class="btn btn-warning">Editar</button>
+                <button (click)="deleteTask(taskFromBackend.id)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

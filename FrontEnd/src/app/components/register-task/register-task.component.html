@@ -1,0 +1,78 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Registro de tarea</h3>
+    <div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="typeTaskRadios" id="personalTask1" checked
+                value="PERSONAL"[(ngModel)]="selectedOption" [(ngModel)]="personalTask.reference" [(ngModel)]="personalTask.taskType" name="taskType">
+            <label class="form-check-label" for="personalTask1">Tarea Personal</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="typeTaskRadios1" id="workTask1"
+                value="WORK" [(ngModel)]="selectedOption" [(ngModel)]="workTask.reference" [(ngModel)]="workTask.taskType" name="taskType">
+            <label class="form-check-label" for="workTask1">Tarea de Trabajo</label>
+        </div>
+    </div>
+
+    <form (ngSubmit)="onSubmitPersonal()">
+        <div class="form-group1" *ngIf="selectedOption === 'PERSONAL'">
+            <div>
+                <label>Título :</label>
+                <input type="text" class="form-control" id="titulo1" [(ngModel)]="personalTask.title" name="title">
+            </div>
+            <div>
+                <label>Descripción :</label>
+                <input type="text" class="form-control" id="description1" [(ngModel)]="personalTask.description"
+                    name="description">
+            </div>
+
+            <div>
+                <label>Estado :</label>
+                <input type="text" class="form-control" id="status1" [(ngModel)]="statusValue" name="status">
+            </div>
+            <div>
+                <label>Categoría :</label>
+                <input type="text" class="form-control" id="category" [(ngModel)]="categoryValue"
+                    name="category">
+            </div>
+            <br>
+            <button class="btn btn-success" (click)="mapeoPersonalTask()">Guardar</button>
+        </div>
+    </form>
+
+
+    <form (ngSubmit)="onSubmitWork()">
+        <div class="form-group2" *ngIf="selectedOption === 'WORK'">
+            <div>
+                <label>Título :</label>
+                <input type="text" class="form-control" id="titulo2" [(ngModel)]="workTask.title" name="title">
+            </div>
+            <div>
+                <label>Descripción :</label>
+                <input type="text" class="form-control" id="description2" [(ngModel)]="workTask.description"
+                    name="description">
+            </div>
+            <div>
+                <label>Estado :</label>
+                <input type="text" class="form-control" id="status2" [(ngModel)]="statusValue" name="status">
+            </div>
+            <div>
+                <label>Projecto :</label>
+                <input type="text" class="form-control" id="project" [(ngModel)]="workTask.project" name="project">
+            </div>
+            <br>
+            <button class="btn btn-success" (click)="mapeoWorkTask()">Guardar</button>
+        </div>
+    </form>
+<br>
+
+<div class="input-group">
+    <select class="custom-select" id="inputGroupSelect04" [(ngModel)]="seleccion">
+      <option selected>Choose...</option>
+      <option value="Personalll">Personal</option>
+      <option value="2">Trabajo</option>
+    </select>
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button" (click)="imprimirSeleccion()">Seleccionar Tipo</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Editar tarea</h3>
+    <form class="form-group">
+        <div>
+            <label>Título :</label>
+            <input type="text" class="form-control" id="titulo" name="title"
+                *ngIf="personalTaskFound.reference === 'PERSONAL'" [(ngModel)]="personalTaskFound.title">
+            <input type="text" class="form-control" id="titulo" name="title" *ngIf="workTaskFound.reference === 'WORK'"
+                [(ngModel)]="workTaskFound.title">
+        </div>
+        <div>
+            <label>Descripción :</label>
+            <input type="text" class="form-control" id="descripcion" name="description"
+                *ngIf="personalTaskFound.reference === 'PERSONAL'" [(ngModel)]="personalTaskFound.description">
+            <input type="text" class="form-control" id="descripcion" name="description"
+                *ngIf="workTaskFound.reference === 'WORK'" [(ngModel)]="workTaskFound.description">
+        </div>
+        <div>
+            <label>Estado :</label>
+            <input type="text" class="form-control" id="status" name="status"
+                *ngIf="personalTaskFound.reference === 'PERSONAL'" [(ngModel)]="personalTaskFound.status">
+            <input type="text" class="form-control" id="status" name="status" *ngIf="workTaskFound.reference === 'WORK'"
+                [(ngModel)]="workTaskFound.status">
+        </div>
+        <div>
+            <label>{{personalTaskFound.reference === 'PERSONAL' ? 'Categoría :' : 'Proyecto :'}}</label>
+            <input type="text" class="form-control" id="category" name="categoria"
+                *ngIf="personalTaskFound.reference === 'PERSONAL'" [(ngModel)]="personalTaskFound.category">
+            <input type="text" class="form-control" id="category" name="categoria" *ngIf="workTaskFound.reference === 'WORK'"
+                [(ngModel)]="workTaskFound.project">
+        </div>
+        <br>
+        <button class="btn btn-success"
+            (click)="personalTaskFound.reference === 'PERSONAL' ? updatePersonalTask() : updateWorkTask()">Editar</button>
+    </form>
+</div>
