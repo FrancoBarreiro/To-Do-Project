@@ -52,7 +52,7 @@ Sin embargo, internamente en el código, estos valores se mapean al inglés, ya 
 Debes ingresar el valor exacto en el campo correspondiente, ya que si ingresas cualquier otro valor no se ejecute correctamente.
 Lo ideal sería utilizar un elemento HTML como <select> en lugar de un campo de texto, esto permitiría al usuario seleccionar una opción válida de manera
 más sencilla y se evitarian errores, de todas formas he priorizado continuar con otros proyectos para enriquecer mis conocimientos en el sector backend.
-  
+
 Si llegaste hasta aqui, te agradezco sinceramente por tu tiempo.
 ¡Espero que encuentres valor en este proyecto y toda critica constructiva que quieras brindar será bienvenida!
 ¡Estoy abierto a escuchar tus comentarios y sugerencias!
