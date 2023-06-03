@@ -8,7 +8,8 @@ que se ejecuta dentro de un contenedor Docker.
 
 Si deseas probar su funcionamiento sigue los pasos a continuación para configurar correctamente la base de datos.
 
-Configuración del Backend:
+CONFIGURACIÓN DEL BACKEND:
+
 Para ejecutar el servidor backend y conectarlo a la base de datos PostgreSQL, sigue estos pasos:
 
 1) Debes tener Docker instalado en tu sistema. Si no lo tienes instalado, puedes descargarlo desde el sitio web oficial: https://www.docker.com/get-started
@@ -27,7 +28,8 @@ Para ejecutar el servidor backend y conectarlo a la base de datos PostgreSQL, si
 6) El servidor backend debería ser accesible en http://localhost:8080. Puedes probar la API utilizando herramientas como Postman, sin embargo para que no
 sea haga tedioso el proceso de prueba he considerado realizar un frontend para facilitar su uso. A continuación puedes configurarlo si asi lo quieres.
 
-Configuración del Frontend:
+CONFIGURACIÓN DEL FRONTEND:
+
 Para ejecutar el frontend de la aplicación, que está desarrollado en Angular, sigue estos pasos:
 
 1) Debes tener Node.js y npm (Node Package Manager) instalados en tu sistema. Puedes descargarlos desde el sitio web oficial: https://nodejs.org
@@ -43,6 +45,7 @@ Este comando compilará la aplicación Angular y iniciará el servidor de desarr
 Una vez que el servidor esté en funcionamiento, puedes acceder a la aplicación abriendo un navegador web y visitando la siguiente URL http://localhost:4200.
 
 <<<<< Notas adicionales >>>>>
+
 Al interactuar con el frontend, puedes ver los valores que el atributo "estado" puede recibir en el código.
 Estos valores son: { "Pendiente", "En proceso", "Completada" }.
 Sin embargo, internamente en el código, estos valores se mapean al inglés, ya que todo el código fue realizado en inglés.
